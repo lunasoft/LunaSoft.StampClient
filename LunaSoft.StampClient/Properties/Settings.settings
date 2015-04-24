@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LunaSoft.StampClient.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LunaSoft_StampClient_lunasoft_cfdi_timbrado_wsTimbrado" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://cfdi.smartweb.com.mx/Timbrado/wsTimbrado.asmx</Value>
+    </Setting>
+    <Setting Name="LunaSoft_StampClient_lunasoft_cfdi_autenticacion_wsAutenticacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://cfdi.smartweb.com.mx/Autenticacion/wsAutenticacion.asmx</Value>
+    </Setting>
+    <Setting Name="LunaSoft_StampClient_lunasoft_cfdi_cancelacion_wsCancelacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://cfdi.smartweb.com.mx/Cancelacion/wsCancelacion.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

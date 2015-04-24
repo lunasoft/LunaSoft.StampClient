@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://cfdi.smartweb.com.mx/Autenticacion/wsAutenticacion.asmx?wsdl" docRef="https://cfdi.smartweb.com.mx/Autenticacion/wsAutenticacion.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://cfdi.smartweb.com.mx/Autenticacion/wsAutenticacion.asmx" xmlns:q1="http://sufacturacion.com/" binding="q1:wsAutenticacionSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://cfdi.smartweb.com.mx/Autenticacion/wsAutenticacion.asmx" xmlns:q2="http://sufacturacion.com/" binding="q2:wsAutenticacionSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

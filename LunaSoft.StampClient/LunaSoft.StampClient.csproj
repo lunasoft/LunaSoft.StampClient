@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6D9BD12-8188-49DB-9815-8F5055566EBF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LunaSoft.StampClient</RootNamespace>
+    <AssemblyName>LunaSoft.StampClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="cadenaoriginal32">
+      <HintPath>..\Extras\Xslt_compiled\cadenaoriginal32.dll</HintPath>
+    </Reference>
+    <Reference Include="cadenaoriginalTFD10">
+      <HintPath>..\Extras\Xslt_compiled\cadenaoriginalTFD10.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\packages\Mono.Security.3.2.3.0\lib\net40\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BLBaseClass.cs" />
+    <Compile Include="CSD\CryptographicService.cs" />
+    <Compile Include="CSD\DotNetUtilities.cs" />
+    <Compile Include="CSD\MakeCert.cs" />
+    <Compile Include="CSD\SignatureXML.cs" />
+    <Compile Include="CSD\ValidateCSD.cs" />
+    <Compile Include="Entities\CancelacionSerializarSF.cs" />
+    <Compile Include="Entities\CFDI.cs" />
+    <Compile Include="Entities\ImpLocal.cs" />
+    <Compile Include="Entities\Nomina11.cs" />
+    <Compile Include="Entities\SignDataResult.cs" />
+    <Compile Include="Entities\SignResult.cs" />
+    <Compile Include="Entities\StampResult.cs" />
+    <Compile Include="Entities\ValidateCerResponse.cs" />
+    <Compile Include="Entities\ValidateXMLResponse.cs" />
+    <Compile Include="Etc\CertUtil.cs" />
+    <Compile Include="Etc\CustomExtensions.cs" />
+    <Compile Include="Etc\FileUtil.cs" />
+    <Compile Include="Etc\TextUtil.cs" />
+    <Compile Include="Implement\ComplementFromInvoice.cs" />
+    <Compile Include="Implement\ConfigValue.cs" />
+    <Compile Include="Implement\Normalize.cs" />
+    <Compile Include="Implement\SerializeInvoice.cs" />
+    <Compile Include="Implement\Serializer.cs" />
+    <Compile Include="Invoice\Issue.cs" />
+    <Compile Include="Invoice\SignInvoice.cs" />
+    <Compile Include="Invoice\ValidateCFDI.cs" />
+    <Compile Include="Invoice\Xslt.cs" />
+    <Compile Include="IStampClientService.cs" />
+    <Compile Include="IValidationService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="StampClientService.cs" />
+    <Compile Include="Stamp\BrokerStamping.cs" />
+    <Compile Include="Stamp\IStamping.cs" />
+    <Compile Include="Stamp\StampFactory.cs" />
+    <Compile Include="Stamp\LunaSoftPCC.cs" />
+    <Compile Include="ValidationService.cs" />
+    <Compile Include="Web References\lunasoft.cfdi.autenticacion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\lunasoft.cfdi.cancelacion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\lunasoft.cfdi.timbrado\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Extras\CertificadoSAT_productivo\AC0_SAT.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\CertificadoSAT_productivo\AC1_SAT.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\CertificadoSAT_productivo\AC2_SAT.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\CertificadoSAT_productivo\AC3_SAT.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\CertificadoSAT_productivo\ARC0_IES.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\CertificadoSAT_productivo\ARC1_IES.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\CertificadoSAT_productivo\ARC2_IES.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\CertificadoSAT_productivo\ARC3_IES.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\CertificadoSAT_pruebas\AC2_UAT.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\CertificadoSAT_pruebas\ARCBanxico_pruebas.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\CertificadoSAT_pruebas\BANXICO.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\aerolineas.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\cfdiregistrofiscal.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\cfdv3.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\cfdv32.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\consumodecombustibles.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\detallista.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\Divisas.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\donat.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\donat11.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\ecb.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\ecc.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\iedu.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\implocal.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\leyendasFisc.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\nomina11.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\notariospublicos.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\pagoenespecie.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\pfic.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\psgecfd.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\spei.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\terceros11.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\TimbreFiscalDigital.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\TuristaPasajeroExtranjero.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\valesdedespensa.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\ventavehiculos.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Extras\XSD\ventavehiculos11.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StampClient.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\lunasoft.cfdi.autenticacion\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\lunasoft.cfdi.autenticacion\wsAutenticacion.wsdl" />
+    <None Include="Web References\lunasoft.cfdi.cancelacion\Acuse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\lunasoft.cfdi.cancelacion\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\lunasoft.cfdi.cancelacion\wsCancelacion.wsdl" />
+    <None Include="Web References\lunasoft.cfdi.timbrado\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\lunasoft.cfdi.timbrado\TimbrarCFDIResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\lunasoft.cfdi.timbrado\wsTimbrado.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://cfdi.smartweb.com.mx/Autenticacion/wsAutenticacion.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\lunasoft.cfdi.autenticacion\</RelPath>
+      <UpdateFromURL>https://cfdi.smartweb.com.mx/Autenticacion/wsAutenticacion.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LunaSoft_StampClient_lunasoft_cfdi_autenticacion_wsAutenticacion</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://cfdi.smartweb.com.mx/Cancelacion/wsCancelacion.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\lunasoft.cfdi.cancelacion\</RelPath>
+      <UpdateFromURL>https://cfdi.smartweb.com.mx/Cancelacion/wsCancelacion.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LunaSoft_StampClient_lunasoft_cfdi_cancelacion_wsCancelacion</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://cfdi.smartweb.com.mx/Timbrado/wsTimbrado.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\lunasoft.cfdi.timbrado\</RelPath>
+      <UpdateFromURL>https://cfdi.smartweb.com.mx/Timbrado/wsTimbrado.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LunaSoft_StampClient_lunasoft_cfdi_timbrado_wsTimbrado</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\lunasoft.cfdi.timbrado\wsTimbrado.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\lunasoft.cfdi.autenticacion\wsAutenticacion.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\lunasoft.cfdi.cancelacion\wsCancelacion.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
