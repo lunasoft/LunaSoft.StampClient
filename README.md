@@ -10,9 +10,10 @@ La libreria de timbrado utiliza un archivo de configuracion StampClient.config ,
 ##Ambiente productivo
 
 Dentro del Archivo StampClient.config es necesario sustituir las llaves : 
-  *PathSat -> Extras\CertificadoSAT_productivo\
-  *URLStampingLS -> [url timbrado productivo proporcionada por el PAC]
-  *URLCancelacionLS -> [url cancelación productivo proporcionada por el PAC]
-  *URLAutenticateLS -> [url autenticacion productivo proporcionada por el PAC]
-  *UserLS -> [usuario de timbrado productivo]
-  *PassLS -> [contraseña de timbrado productivo]
+
+    *PathSat -> Extras\CertificadoSAT_productivo\
+    *URLStampingLS -> [url timbrado productivo proporcionada por el PAC]
+    *URLCancelacionLS -> [url cancelación productivo proporcionada por el PAC]
+    *URLAutenticateLS -> [url autenticacion productivo proporcionada por el PAC]
+    *UserLS -> [usuario de timbrado productivo]
+    *PassLS -> [contraseña de timbrado productivo]
