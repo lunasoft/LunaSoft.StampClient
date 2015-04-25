@@ -1,4 +1,4 @@
-LunaSoft.StampClient/LunaSoft.StampClient/bin/**
-LunaSoft.StampClient/LunaSoft.StampClient/obj/**
-LunaSoft.StampClient/Testing/TesterLunaSoft/bin/**
-LunaSoft.StampClient/Testing/TesterLunaSoft/obj/**
+LunaSoft.StampClient/bin/
+LunaSoft.StampClient/obj/
+Testing/TesterLunaSoft/bin/
+Testing/TesterLunaSoft/obj/

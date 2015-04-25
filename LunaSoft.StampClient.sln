@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LunaSoft.StampClient", "LunaSoft.StampClient\LunaSoft.StampClient.csproj", "{A6D9BD12-8188-49DB-9815-8F5055566EBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesterLunaSoft", "Testing\TesterLunaSoft\TesterLunaSoft.csproj", "{0D4AFA6A-B89A-40CA-A6F4-32FDB69D21AF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{A6D9BD12-8188-49DB-9815-8F5055566EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6D9BD12-8188-49DB-9815-8F5055566EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6D9BD12-8188-49DB-9815-8F5055566EBF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D4AFA6A-B89A-40CA-A6F4-32FDB69D21AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D4AFA6A-B89A-40CA-A6F4-32FDB69D21AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D4AFA6A-B89A-40CA-A6F4-32FDB69D21AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D4AFA6A-B89A-40CA-A6F4-32FDB69D21AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
