@@ -134,5 +134,23 @@ namespace LunaSoft.StampClient
             }
             return res;
         }
+
+        public Entities.CancelResult Cancel(string UUID, string rfc, byte[] bCer, byte[] bKey, string password)
+        {
+            Entities.CancelResult res = new Entities.CancelResult();
+            try
+            {
+                //Obtenemos el PFX
+                byte[] pfx = CSD.MakeCert.generatePFX(bCer, bKey, password);
+                //Cancelamos la factura con Luna Soft.
+                var broker = new Stamp.BrokerStamping();
+                res = broker.CancelInvoice(UUID, rfc, pfx, password);
+            }
+            catch (Exception ex)
+            {
+                res.AddError("Cancelación - " + ex.Message);
+            }
+            return res;
+        }
     }
 }

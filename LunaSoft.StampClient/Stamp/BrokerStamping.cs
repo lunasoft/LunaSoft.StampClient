@@ -37,13 +37,13 @@ namespace LunaSoft.StampClient.Stamp
         /// <param name="pfx"></param>
         /// <param name="passwordPFX"></param>
         /// <returns></returns>
-        internal Entities.CancelResult CancelInvoice(string UUID, string rfc, string stampedBroker, byte[] pfx, string passwordPFX)
+        internal Entities.CancelResult CancelInvoice(string UUID, string rfc, byte[] pfx, string passwordPFX)
         {
             try
             {
                 //Creamos la instancia
                 StampFactory factory = new StampFactory();
-                IStamping stampService = factory.CreateInstance(stampedBroker);
+                IStamping stampService = factory.CreateStampBroker();
                 return stampService.CancelStamp(UUID, rfc, pfx, passwordPFX);
             }
             catch (Exception ex)

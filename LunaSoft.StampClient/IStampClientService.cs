@@ -11,5 +11,6 @@ namespace LunaSoft.StampClient
         Entities.SignResult SignInvoice(byte[] bCer, byte[] bKey, string password, string xmlInvoice, string rfcEmisor);
         Entities.StampResult Stamp(Entities.Comprobante invoice);
         Entities.StampResult Stamp(string xmlInvoice);
+        Entities.CancelResult Cancel(string UUID, string rfc, byte[] bCer, byte[] bKey, string password);
     }
 }
